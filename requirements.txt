@@ -1,0 +1,4 @@
+reflex==0.9.4
+plotly>=6.0.0
+pandas>=2.0.0
+xerparser>=0.13.0
