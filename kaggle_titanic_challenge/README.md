@@ -87,9 +87,28 @@ printed as a ranked comparison table (sorted by held-out F1 score).
 
 ### Results
 
-See [`benchmark_results.csv`](benchmark_results.csv) for the full comparison
-table (cross-validated and held-out metrics, best hyperparameters, and timing
-for every model).
+Held-out test set (20% stratified split), tuned models sorted by F1 score:
+
+| Model               | CV Accuracy | CV F1  | CV ROC-AUC | Test Accuracy | Test Precision | Test Recall | Test F1 | Test ROC-AUC |
+|---------------------|:-----------:|:------:|:----------:|:-------------:|:--------------:|:-----------:|:-------:|:------------:|
+| Logistic Regression | 0.8076      | 0.7432 | 0.8610     | 0.8101        | 0.7869         | 0.6957      | **0.7385** | 0.8462    |
+| LightGBM            | 0.8132      | 0.7496 | 0.8755     | 0.7877        | 0.7460         | 0.6812      | 0.7121     | 0.8160    |
+| XGBoost             | 0.8062      | 0.7432 | 0.8752     | 0.7877        | 0.7541         | 0.6667      | 0.7077     | 0.8105    |
+| K-Nearest Neighbors | 0.7936      | 0.7210 | 0.8358     | 0.7654        | 0.6957         | 0.6957      | 0.6957     | 0.8372    |
+| Decision Tree       | 0.7781      | 0.7116 | 0.7675     | 0.7263        | 0.6613         | 0.5942      | 0.6260     | 0.7384    |
+
+**Best model:** Logistic Regression — best held-out F1 (0.7385) and ROC-AUC
+(0.8462), tuned to `C=0.1`. The boosted-tree models (LightGBM, XGBoost) reach
+the highest cross-validated ROC-AUC (~0.875) but generalize slightly worse on
+the held-out split, while the simpler linear model proves to be a strong,
+well-calibrated baseline for this small, mostly-linearly-separable dataset.
+The Decision Tree is the weakest model, as expected for a single unconstrained
+tree on tabular data of this size.
+
+Full comparison table — including best hyperparameters from `GridSearchCV` and
+training/tuning times — is available in
+[`benchmark_results.csv`](benchmark_results.csv) /
+[`benchmark_results.json`](benchmark_results.json).
 
 ## How to reproduce
 

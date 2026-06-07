@@ -1,0 +1,6 @@
+model,cv_accuracy_mean,cv_accuracy_std,cv_f1_mean,cv_roc_auc_mean,best_params,tuned_cv_f1,test_accuracy,test_precision,test_recall,test_f1,test_roc_auc,baseline_cv_time_s,tuning_time_s
+Logistic Regression,0.8076,0.0217,0.7432,0.861,"{'clf__C': 0.1, 'clf__penalty': 'l2'}",0.7446,0.8101,0.7869,0.6957,0.7385,0.8462,0.23,1.73
+LightGBM,0.8132,0.0303,0.7496,0.8755,"{'clf__learning_rate': 0.1, 'clf__max_depth': 5, 'clf__n_estimators': 300}",0.7607,0.7877,0.746,0.6812,0.7121,0.816,0.37,2085.64
+XGBoost,0.8062,0.0256,0.7432,0.8752,"{'clf__learning_rate': 0.1, 'clf__max_depth': 3, 'clf__n_estimators': 300}",0.7617,0.7877,0.7541,0.6667,0.7077,0.8105,0.4,0.93
+K-Nearest Neighbors,0.7936,0.0159,0.721,0.8358,"{'clf__n_neighbors': 11, 'clf__weights': 'distance'}",0.7489,0.7654,0.6957,0.6957,0.6957,0.8372,0.3,0.37
+Decision Tree,0.7781,0.0175,0.7116,0.7675,"{'clf__max_depth': 7, 'clf__min_samples_leaf': 5}",0.7382,0.7263,0.6613,0.5942,0.626,0.7384,0.2,0.52

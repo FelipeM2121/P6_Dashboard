@@ -1,0 +1,99 @@
+[
+  {
+    "model": "Logistic Regression",
+    "cv_accuracy_mean": 0.8076,
+    "cv_accuracy_std": 0.0217,
+    "cv_f1_mean": 0.7432,
+    "cv_roc_auc_mean": 0.861,
+    "best_params": {
+      "clf__C": 0.1,
+      "clf__penalty": "l2"
+    },
+    "tuned_cv_f1": 0.7446,
+    "test_accuracy": 0.8101,
+    "test_precision": 0.7869,
+    "test_recall": 0.6957,
+    "test_f1": 0.7385,
+    "test_roc_auc": 0.8462,
+    "baseline_cv_time_s": 0.23,
+    "tuning_time_s": 1.73
+  },
+  {
+    "model": "K-Nearest Neighbors",
+    "cv_accuracy_mean": 0.7936,
+    "cv_accuracy_std": 0.0159,
+    "cv_f1_mean": 0.721,
+    "cv_roc_auc_mean": 0.8358,
+    "best_params": {
+      "clf__n_neighbors": 11,
+      "clf__weights": "distance"
+    },
+    "tuned_cv_f1": 0.7489,
+    "test_accuracy": 0.7654,
+    "test_precision": 0.6957,
+    "test_recall": 0.6957,
+    "test_f1": 0.6957,
+    "test_roc_auc": 0.8372,
+    "baseline_cv_time_s": 0.3,
+    "tuning_time_s": 0.37
+  },
+  {
+    "model": "Decision Tree",
+    "cv_accuracy_mean": 0.7781,
+    "cv_accuracy_std": 0.0175,
+    "cv_f1_mean": 0.7116,
+    "cv_roc_auc_mean": 0.7675,
+    "best_params": {
+      "clf__max_depth": 7,
+      "clf__min_samples_leaf": 5
+    },
+    "tuned_cv_f1": 0.7382,
+    "test_accuracy": 0.7263,
+    "test_precision": 0.6613,
+    "test_recall": 0.5942,
+    "test_f1": 0.626,
+    "test_roc_auc": 0.7384,
+    "baseline_cv_time_s": 0.2,
+    "tuning_time_s": 0.52
+  },
+  {
+    "model": "XGBoost",
+    "cv_accuracy_mean": 0.8062,
+    "cv_accuracy_std": 0.0256,
+    "cv_f1_mean": 0.7432,
+    "cv_roc_auc_mean": 0.8752,
+    "best_params": {
+      "clf__learning_rate": 0.1,
+      "clf__max_depth": 3,
+      "clf__n_estimators": 300
+    },
+    "tuned_cv_f1": 0.7617,
+    "test_accuracy": 0.7877,
+    "test_precision": 0.7541,
+    "test_recall": 0.6667,
+    "test_f1": 0.7077,
+    "test_roc_auc": 0.8105,
+    "baseline_cv_time_s": 0.4,
+    "tuning_time_s": 0.93
+  },
+  {
+    "model": "LightGBM",
+    "cv_accuracy_mean": 0.8132,
+    "cv_accuracy_std": 0.0303,
+    "cv_f1_mean": 0.7496,
+    "cv_roc_auc_mean": 0.8755,
+    "best_params": {
+      "clf__learning_rate": 0.1,
+      "clf__max_depth": 5,
+      "clf__n_estimators": 300
+    },
+    "tuned_cv_f1": 0.7607,
+    "test_accuracy": 0.7877,
+    "test_precision": 0.746,
+    "test_recall": 0.6812,
+    "test_f1": 0.7121,
+    "test_roc_auc": 0.816,
+    "baseline_cv_time_s": 0.37,
+    "tuning_time_s": 2085.64
+  }
+]
